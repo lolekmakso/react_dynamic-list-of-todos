@@ -3,10 +3,10 @@ import { Todo } from '../../types/Todo';
 
 interface Props {
   todos: Todo[];
-  onShow: (todo: Todo) => void;
+  onShowTodo: (todo: Todo) => void;
 }
 
-export const TodoList: React.FC<Props> = ({ todos, onShow }) => (
+export const TodoList: React.FC<Props> = ({ todos, onShowTodo }) => (
   <table className="table is-narrow is-fullwidth">
     <thead>
       <tr>
@@ -46,7 +46,7 @@ export const TodoList: React.FC<Props> = ({ todos, onShow }) => (
               data-cy="selectButton"
               className="button"
               type="button"
-              onClick={() => onShow(todo)}
+              onClick={() => onShowTodo(todo)}
             >
               <span className="icon">
                 <i className="far fa-eye" />
